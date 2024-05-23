@@ -68,11 +68,12 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stargate Data</title>
+    <title>Stargejt Data</title>
     <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
+<a href="./index.php" class="btn btn-primary">Main menu</a>
 <a href="./logout.php" class="btn btn-primary">Log Out</a>
     <div class="container">
         <h2>Záznam průjezdů</h2>

@@ -14,11 +14,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StarGate-Přidat záznam</title>
+    <title>StarGejt-Přidat záznam</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="./logout.php" class="btn btn-primary">Log Out</a>
+<a href="./index.php" class="btn btn-primary">Main menu</a>
+<a href="./logout.php" class="btn btn-primary">Log Out</a>
     <div class="container">
         <h2>Přidat záznam</h2>
         <form action="upload.php" method="post" enctype="multipart/form-data">
