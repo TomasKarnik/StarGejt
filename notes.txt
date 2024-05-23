@@ -1,0 +1,11 @@
+Interesting notes how this shitshow works
+
+
+
+
+max picture size:16mb(can be adjusted in DB and in upload.php, line 39)
+
+
+
+
+
