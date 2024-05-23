@@ -7,5 +7,8 @@ max picture size:16mb(can be adjusted in DB and in upload.php, line 39)
 
 
 
+---------------
+company.php,spz.php,persons.php
+used to add records to db->used to choose in upload_form.php/upload.php make it easyer for users to choose if known company if its not wanted to input manually
 
 
