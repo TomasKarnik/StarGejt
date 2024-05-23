@@ -1,4 +1,9 @@
 # StarGate-PHP,HTML,CSS,SQL
-Created for logging gate activity.
+
+Simple webapp to store data from gat. Who comes in, who comes out.
+
+
+
+
 
 
