@@ -11,11 +11,11 @@ How to use:
 
 #Pictures
 
-![screenshot](./img/readme-git/2.jpg)x
-![screenshot](./img/readme-git/3.jpg)x
-![screenshot](./img/readme-git/4.jpg)x
-![screenshot](./img/readme-git/5.jpg)x
-![screenshot](./img/readme-git/6.jpg)x
+![screenshot](./img/readme-git/2.png)x
+![screenshot](./img/readme-git/3.png)x
+![screenshot](./img/readme-git/4.png)x
+![screenshot](./img/readme-git/5.png)x
+![screenshot](./img/readme-git/6.png)x
 
 
 
