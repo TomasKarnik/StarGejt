@@ -9,6 +9,13 @@ How to use:
 
 ![screenshot](./img/readme-git/1.jpg)
 
+#Pictures
+
+![screenshot](./img/readme-git/2.jpg)x
+![screenshot](./img/readme-git/3.jpg)x
+![screenshot](./img/readme-git/4.jpg)x
+![screenshot](./img/readme-git/5.jpg)x
+![screenshot](./img/readme-git/6.jpg)x
 
 
 
