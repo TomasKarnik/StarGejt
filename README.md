@@ -1,7 +1,7 @@
 # StarGejt
+StarGejt is a web application for managing records of vehicles passing through a gate. It allows users to add, edit, and delete records, as well as filter and search through existing records.
 ![screenshot](./img/logo.png)
 
-StarGejt is a web application for managing records of vehicles passing through a gate. It allows users to add, edit, and delete records, as well as filter and search through existing records.
 
 ## Features
 
