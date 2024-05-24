@@ -76,7 +76,7 @@ $result = $conn->query($sql);
         <a href="./main.php" class="btn btn-primary">Záznamy průjezdů</a>
         <a href="./company.php" class="btn btn-primary">Firmy</a>
         <a href="./persons.php" class="btn btn-primary">Lidé</a>
-        <a href="./spz.php" class="btn btn-primary">Vozidla</a>
+        <a href="./vehicle.php" class="btn btn-primary">Vozidla</a>
         <a href="./logout.php" class="btn btn-primary">Log Out</a>
     <div class="container">
         <h2>Záznam průjezdů</h2>

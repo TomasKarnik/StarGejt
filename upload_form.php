@@ -23,7 +23,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
         <a href="./main.php" class="btn btn-primary">Záznamy průjezdů</a>
         <a href="./company.php" class="btn btn-primary">Firmy</a>
         <a href="./persons.php" class="btn btn-primary">Lidé</a>
-        <a href="./spz.php" class="btn btn-primary">Vozidla</a>
+        <a href="./vehicle.php" class="btn btn-primary">Vozidla</a>
         <a href="./logout.php" class="btn btn-primary">Log Out</a>
 <a href="./index.php" class="btn btn-primary">Main menu</a>
 <a href="./logout.php" class="btn btn-primary">Log Out</a>
