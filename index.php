@@ -25,7 +25,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
 <body>
   <div class="container">
     <div class="alert alert-success my-5">
-    <img src="./img/logo.png" class="img-fluid rounded" alt="Logo" width="180">
+    <img src="./img/logo-text.png" class="img-fluid rounded" alt="Logo" width="180">
       Welcome ! You are now signed in to your account.
     </div>
     <!-- User profile -->
