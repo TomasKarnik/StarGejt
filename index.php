@@ -33,11 +33,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
       <div class="col-lg-5 text-center">
         <img src="./img/blank-avatar.jpg" class="img-fluid rounded" alt="User avatar" width="180">
         <h4 class="my-4">Hello, <?= htmlspecialchars($_SESSION["username"]); ?></h4>
-        <a href="./upload_form.php" class="btn btn-primary">Zapiš průjezd</a>
-        <a href="./main.php" class="btn btn-primary">Záznamy průjezdů</a>
-        <a href="./company.php" class="btn btn-primary">Firmy</a>
-        <a href="./persons.php" class="btn btn-primary">Lidé</a>
-        <a href="./vehicle.php" class="btn btn-primary">Vozidla</a>
+        <a href="./upload_form.php" class="btn btn-primary">Add record</a>
+        <a href="./main.php" class="btn btn-primary">Records</a>
+        <a href="./company.php" class="btn btn-primary">Companies</a>
+        <a href="./persons.php" class="btn btn-primary">Persons</a>
+        <a href="./vehicle.php" class="btn btn-primary">Vehicles</a>
         <a href="./logout.php" class="btn btn-primary">Log Out</a>
       </div>
     </div>
