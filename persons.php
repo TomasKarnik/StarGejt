@@ -42,17 +42,13 @@ if (isset($_POST['remove_person'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add/Remove Persons</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        form {
-            margin-bottom: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarGejt</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -67,8 +63,27 @@ if (isset($_POST['remove_person'])) {
         <form method="post">
             <label for="person_id">Person ID:</label>
             <input type="number" id="person_id" name="person_id" required>
-            <input type="submit" name="remove_person" value="Remove Person">
+            <input type="submit" name="remove_person" value="Remove Person" onclick="return confirm('Are you sure you want to remove this person?');">
         </form>
+
+        <h2>Persons List</h2>
+        <ul>
+            <?php
+            // Fetch persons from database
+            $sql = "SELECT id, name FROM persons";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // Output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<li>ID: " . $row["id"] . " - Name: " . $row["name"] . " <a href='edit_person.php?id=" . $row["id"] . "' class='btn btn-primary'>Edit</a> <form method='post' style='display:inline-block;' onsubmit='return confirm(\"Are you sure you want to delete this person?\")'> <input type='hidden' name='person_id' value='" . $row["id"] . "'> <input type='submit' name='remove_person' value='Delete' class='btn btn-danger' onclick='return confirm(\"Are you sure you want to delete this person?\");'></form></li>";
+
+                }
+            } else {
+                echo "0 results";
+            }
+            ?>
+        </ul>
     </div>
 </body>
 </html>
