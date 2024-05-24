@@ -51,6 +51,12 @@ if (isset($_POST['remove_person'])) {
   <link rel="shortcut icon" href="./img/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
+<a href="./upload_form.php" class="btn btn-primary">Zapiš průjezd</a>
+        <a href="./main.php" class="btn btn-primary">Záznamy průjezdů</a>
+        <a href="./company.php" class="btn btn-primary">Firmy</a>
+        <a href="./persons.php" class="btn btn-primary">Lidé</a>
+        <a href="./spz.php" class="btn btn-primary">Vozidla</a>
+        <a href="./logout.php" class="btn btn-primary">Log Out</a>
     <div class="container">
         <h2>Add Person</h2>
         <form method="post">
