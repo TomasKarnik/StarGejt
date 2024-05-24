@@ -1,12 +1,11 @@
 <?php
-
-# Initialize the session
+// Initialize the session
 session_start();
 
-# If user is not logged in then redirect him to login page
+// If user is not logged in then redirect him to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
-  echo "<script>" . "window.location.href='./login.php';" . "</script>";
-  exit;
+    echo "<script>window.location.href='./login.php';</script>";
+    exit;
 }
 
 // Database connection
@@ -68,13 +67,12 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stargejt-records</title>
+    <title>Stargejt Records</title>
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 <body>
-<a href="./index.php" class="btn btn-primary">Main menu</a>
-<a href="./logout.php" class="btn btn-primary">Log Out</a>
+    <a href="./index.php" class="btn btn-primary">Main menu</a>
+    <a href="./logout.php" class="btn btn-primary">Log Out</a>
     <div class="container">
         <h2>Záznam průjezdů</h2>
         <form method="get" action="">
@@ -105,6 +103,8 @@ $result = $conn->query($sql);
                 <th>Důvod</th>
                 <th>Saved Time</th>
                 <th>Picture</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             <?php
             if ($result->num_rows > 0) {
@@ -120,15 +120,16 @@ $result = $conn->query($sql);
                     echo "<td>" . $row["důvod"] . "</td>";
                     echo "<td>" . $row["saved_time"] . "</td>"; // Assuming saved_time is already in datetime format
                     echo "<td><img src='" . $row["picture"] . "' alt='Stargate Picture' style='max-width: 100px;'></td>";
+                    echo "<td><a href='edit_record.php?id=" . $row["id"] . "' class='btn btn-primary'>Edit</a></td>";
+                    echo "<td><a href='delete_record.php?id=" . $row["id"] . "' class='btn btn-danger' onclick=\"return confirm('Are you sure you want to delete this record?');\">Delete</a></td>";
                     echo "</tr>";
                 }
             } else {
-                echo "<tr><td colspan='9'>No results found</td></tr>";
+                echo "<tr><td colspan='11'>No results found</td></tr>";
             }
             ?>
         </table>
     </div>
-    
 </body>
 </html>
 
