@@ -12,9 +12,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StarGejt-Přidat záznam</title>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarGejt-Vehicles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-i
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,8 +29,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
         <a href="./persons.php" class="btn btn-primary">Lidé</a>
         <a href="./vehicle.php" class="btn btn-primary">Vozidla</a>
         <a href="./logout.php" class="btn btn-primary">Log Out</a>
-<a href="./index.php" class="btn btn-primary">Main menu</a>
-<a href="./logout.php" class="btn btn-primary">Log Out</a>
     <div class="container">
         <h2>Přidat záznam</h2>
         <form action="upload.php" method="post" enctype="multipart/form-data">

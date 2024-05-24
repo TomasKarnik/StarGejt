@@ -1,4 +1,12 @@
 <?php
+// Initialize the session
+session_start();
+
+// If user is not logged in then redirect him to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== TRUE) {
+    echo "<script>window.location.href='./login.php';</script>";
+    exit;
+}
 // Database connection
 $servername = "localhost";
 $username = "vratnice"; // Replace with your database username
@@ -21,18 +29,15 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<a href="./index.php" class="btn btn-primary">Home</a>
-<a href="./upload_form.php" class="btn btn-primary">Zapiš průjezd</a>
-        <a href="./main.php" class="btn btn-primary">Záznamy průjezdů</a>
-        <a href="./company.php" class="btn btn-primary">Firmy</a>
-        <a href="./persons.php" class="btn btn-primary">Lidé</a>
-        <a href="./vehicle.php" class="btn btn-primary">Vozidla</a>
-        <a href="./logout.php" class="btn btn-primary">Log Out</a>
-<a href="./index.php" class="btn btn-primary">Main menu</a>
-<a href="./logout.php" class="btn btn-primary">Log Out</a>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vehicles Records</title>
+
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StarGejt-Vehicles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
     <style>
         table {
             border-collapse: collapse;
@@ -66,7 +71,15 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
+<a href="./index.php" class="btn btn-primary">Home</a>
+<a href="./upload_form.php" class="btn btn-primary">Zapiš průjezd</a>
+        <a href="./main.php" class="btn btn-primary">Záznamy průjezdů</a>
+        <a href="./company.php" class="btn btn-primary">Firmy</a>
+        <a href="./persons.php" class="btn btn-primary">Lidé</a>
+        <a href="./vehicle.php" class="btn btn-primary">Vozidla</a>
+        <a href="./logout.php" class="btn btn-primary">Log Out</a>
     <h2>Vehicles Records</h2>
+    <a href="add_vehicle.php" class="btn btn-primary">Add Record</a>
     <table>
         <tr>
             <th>ID</th>
@@ -94,7 +107,6 @@ $result = $conn->query($sql);
         }
         ?>
     </table>
-    <a href="add_vehicle.php" class="btn">Add Record</a>
 </body>
 </html>
 
