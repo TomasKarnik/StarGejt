@@ -17,7 +17,7 @@ StarGejt is a web application for managing records of vehicles passing through a
 
 ## Setup
 
-1. Clone the repository: `git clone https://github.com/your-username/StarGejt.git`
+1. Clone the repository: `git clone https://github.com/tomaskarnik/StarGejt.git`
 2. Import the MySQL database using the provided SQL file.
 3. Update the database connection details in PHP files (`upload.php`, `edit_record.php`, `delete_record.php`, etc.) with your database credentials.
 4. Make sure your web server (e.g., Apache) and MySQL server are running.
