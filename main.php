@@ -71,7 +71,8 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a href="./upload_form.php" class="btn btn-primary">Zapiš průjezd</a>
+<a href="./index.php" class="btn btn-primary">Home</a>
+        <a href="./upload_form.php" class="btn btn-primary">Zapiš průjezd</a>
         <a href="./main.php" class="btn btn-primary">Záznamy průjezdů</a>
         <a href="./company.php" class="btn btn-primary">Firmy</a>
         <a href="./persons.php" class="btn btn-primary">Lidé</a>
